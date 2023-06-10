@@ -1,0 +1,97 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+/* The following block can be included in a custom.scss */
+
+/* make the customizations */
+// Variables
+$custom-theme: (
+    "primary": #25bb77,
+    //#4fd99f
+    "secondary": teal,
+    "background-menu-item": #2cc47f,
+);
+
+html,
+body,
+#root {
+    height: 100%;
+
+    hr {
+        margin: 0px;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .custom-form-control{
+        border-radius: 1rem;
+        &:focus {
+            border-radius: 0.75rem;
+        }        
+    }
+    .form-control:focus {
+        // border-color: var(--bs-primary) !important;#25bb77 
+        box-shadow: 1px 2px 3px var(--bs-primary) !important;
+        // border-color: adjust-color($color: #25bb77, $lightness: 0%);
+    }
+
+    .btn-outline-primary:hover {
+        color: var(--bs-white);
+    }
+}
+
+$body-bg: #eeeeee;
+$body-color: #545555;
+
+$theme-colors: map-merge($theme-colors, $custom-theme);
+$enable-shadows: true;
+
+// Card component
+$card-box-shadow: 0px 9px 11px -8px rgba(0, 0, 0, 0.25);
+$card-border-radius: 12px;
+$card-spacer-y: 2rem;
+$card-spacer-x: 1.5rem;
+$card-title-spacer-y: 1.5rem;
+
+// Buttons
+$btn-padding-x: 1.5rem;
+$btn-border-radius: 2rem;
+$btn-border-radius-sm: 2rem;
+
+// Form control
+$input-border-radius: 2rem;
+
+//Navbar
+$navbar-padding-y: 0;
+$nav-link-padding-y: 1rem;
+$navbar-nav-link-padding-x: 1rem;
+
+
+// Links
+$link-color: rgb(44, 44, 44);
+$link-decoration: none;
+$link-hover-color: rgb(77, 77, 77);
+
+//Star
+$react-rater-link: #ccc !default; // color of star not rated
+$react-rater-hover: #666 !default; // color of star on hover
+$react-rater-active: #cab91e !default; // color of star rated
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
+@import "./font";
+@import "./components/booking";
+@import "./components/form-group";
+@import "./components/button-group";
+@import "./components/navbar";
+@import "./components/flag-icons";
+@import "./components/page";
+@import "./components/tabsItem";
+@import "./components/breadcrumbs";
+@import "./components/valueProduct";
+@import "./components/button";
+@import "./components/carousel";
+@import "./components/date";
